@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleDeBar.WebApp", "Con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleDeBar.Dominio", "ControleDeBar.Dominio\ControleDeBar.Dominio.csproj", "{87665DC1-7DC1-4BBB-B7EB-B09E67A71BAC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleDeBar.Infraestrutura.Arquivos", "ControleDeBar.Infraestrutura.Arquivos\ControleDeBar.Infraestrutura.Arquivos.csproj", "{DD5060B9-1625-4262-A02C-1930BDAD960B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{87665DC1-7DC1-4BBB-B7EB-B09E67A71BAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87665DC1-7DC1-4BBB-B7EB-B09E67A71BAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87665DC1-7DC1-4BBB-B7EB-B09E67A71BAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD5060B9-1625-4262-A02C-1930BDAD960B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD5060B9-1625-4262-A02C-1930BDAD960B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD5060B9-1625-4262-A02C-1930BDAD960B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD5060B9-1625-4262-A02C-1930BDAD960B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D703E61B-AACC-4F31-B606-B911EF9BDDDE} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{87665DC1-7DC1-4BBB-B7EB-B09E67A71BAC} = {3AADDB6F-9A57-4A67-8862-7FA9FC7831EA}
+		{DD5060B9-1625-4262-A02C-1930BDAD960B} = {D2AA3D68-877B-40C1-9156-716E341DB39A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8E5A7F53-5B5B-4AA2-8680-477FEB21A50A}
