@@ -35,7 +35,20 @@ public class MesaController : Controller
     }
 
     [HttpPost("cadastrar")]
+    [ValidateAntiForgeryToken]
     public IActionResult Cadastrar(CadastrarMesaViewModel cadastrarVM) {
+        var registros = repositorioMesa.SelecionarRegistros();
+
+        foreach (var item in registros) {
+            if (item.Numero.Equals(cadastrarVM.Numero)) {
+                ModelState.AddModelError("CadastroUnico", "Já existe uma mesa registrada com este número.");
+                break;
+            }
+        }
+
+        if (!ModelState.IsValid)
+            return View(cadastrarVM);
+
         var entidade = cadastrarVM.ParaEntidade();
 
         repositorioMesa.CadastrarRegistro(entidade);
@@ -53,7 +66,20 @@ public class MesaController : Controller
     }
 
     [HttpPost("editar/{id:guid}")]
+    [ValidateAntiForgeryToken]
     public IActionResult Editar(Guid id, EditarMesaViewModel editarVM) {
+        var registros = repositorioMesa.SelecionarRegistros();
+
+        foreach (var item in registros) {
+            if (!item.Id.Equals(id) && item.Numero.Equals(editarVM.Numero)) {
+                ModelState.AddModelError("CadastroUnico", "Já existe uma mesa registrada com este número.");
+                break;
+            }
+        }
+
+        if (!ModelState.IsValid)
+            return View(editarVM);
+
         var entidadeEditada = editarVM.ParaEntidade();
 
         repositorioMesa.EditarRegistro(id, entidadeEditada);
