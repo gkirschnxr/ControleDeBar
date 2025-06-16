@@ -2,6 +2,7 @@
 using System.Text.Json;
 using ControleDeBar.Dominio.ModuloMesa;
 using ControleDeBar.Dominio.ModuloGarcom;
+using ControleDeBar.Dominio.ModuloProduto;
 
 namespace ControleDeBar.Infraestrura.Arquivos.Compartilhado;
 
@@ -12,6 +13,7 @@ public class ContextoDados
 
     public List<Mesa> Mesas { get; set; }
     public List<Garcom> Garcons { get; set; }
+    public List<Produto> Produtos { get; internal set; }
 
     public ContextoDados() {
         Mesas = new List<Mesa>();
@@ -60,5 +62,6 @@ public class ContextoDados
 
         Mesas = contextoArmazenado.Mesas;
         Garcons = contextoArmazenado.Garcons;
+        Produtos = contextoArmazenado.Produtos;
     }
 }
